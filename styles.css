@@ -1,0 +1,339 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la pantalla */
+}
+
+body {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-size: 22px; /* Tamaño de texto 22px */
+    background-color: #F5F5DC; /* Color hueso */
+    color: #5C4033; /* Café claro */
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #D2B48C; /* Beige */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+header h1 {
+    font-size: 36px; /* Título más grande */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Menú hamburguesa */
+.menu {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.menu-toggle {
+    font-size: 32px; /* Tamaño del menú hamburguesa */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: #D2B48C;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav.show {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+/* Estilos del contenido principal */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilos del catálogo */
+.catalogo h2 {
+    font-size: 30px; /* Tamaño del encabezado de las categorías */
+    margin-bottom: 20px;
+}
+
+.catalogo ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.catalogo ul li {
+    margin-bottom: 10px;
+}
+
+.catalogo ul li a {
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #F5DEB3;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.catalogo ul li a:hover {
+    background-color: #D2B48C; /* Fondo más oscuro cuando se pasa el ratón */
+}
+
+/* Estilos de las categorías de panes */
+.categoria {
+    margin-bottom: 50px; /* Gran separación entre categorías */
+    padding: 20px;
+    border: 1px solid #D2B48C; /* Borde suave entre categorías */
+    border-radius: 8px;
+    background-color: #FFF8E1; /* Fondo ligero para cada categoría */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.categoria h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #8B4513;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column; /* Coloca el nombre, la imagen y el precio en columna */
+    align-items: center; /* Centra todos los elementos */
+    text-align: center; /* Alinea el texto centrado */
+}
+
+.image-item .name {
+    font-size: 18px; /* Tamaño del texto del nombre */
+    font-weight: bold; /* Resalta el nombre */
+    color: #5C4033; /* Color café claro */
+    margin-bottom: 10px; /* Espacio entre el nombre y la imagen */
+}
+
+.image-item .estatus {
+    font-size: 17px; /* Tamaño del texto del nombre */
+    font-weight: bold; /* Resalta el nombre */
+    color: #FF0000; 
+    margin-bottom: 10px; /* Espacio entre el nombre y la imagen */
+}
+
+
+.image-item img {
+    width: 150px; /* Tamaño uniforme para las imágenes */
+    height: 150px; /* Altura uniforme */
+    object-fit: cover; /* Recorta las imágenes proporcionalmente */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 10px; /* Espacio entre la imagen y el precio */
+}
+
+.image-item .price {
+    font-size: 16px; /* Tamaño del texto del precio */
+    font-weight: bold; /* Resalta el precio */
+    color: #8B4513; /* Color café */
+}
+
+
+
+/* Efecto hover para las categorías */
+.categoria:hover {
+    background-color: #F5DEB3; /* Fondo más cálido al pasar el ratón */
+    transform: scale(1.02); /* Ligera expansión de la categoría */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #8B4513; /* Café oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Asegura que el footer esté al final */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        font-size: 32px;
+    }
+
+    nav {
+        width: 100%;
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid white;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    /* Galería de imágenes en pantallas pequeñas */
+    .image-grid {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más pequeñas */
+    }
+
+    /* Espaciado entre las categorías */
+    .categoria {
+        margin-bottom: 30px; /* Menos margen en pantallas pequeñas */
+    }
+}
+
+/* Asegura que la sección de ubicación tenga un diseño adecuado */
+.ubicacion {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que el mapa y las imágenes estén a los extremos */
+    align-items: flex-start; /* Alinea los elementos al principio (parte superior) */
+    gap: 20px; /* Espacio entre el mapa y las imágenes */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Estilo para el mapa de Google */
+.mapa-imagenes iframe {
+    flex: 1; /* Esto asegura que el mapa ocupe todo el espacio disponible dentro del contenedor */
+    height: 650px; /* Ajusta la altura del mapa */
+    width: 300% !important;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+/* Estilo para las imágenes laterales (a la derecha del mapa) */
+.imagenes-laterales {
+    flex-direction: column; /* Alinea las imágenes en columna */
+    display: flex;
+      gap: 30px; /* Espacio entre las imágenes */
+    max-width: 500px; /* Limita el ancho de las imágenes */
+    flex-shrink: 0; /* Impide que las imágenes se encojan */
+}
+
+.imagenes-laterales img {
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra suave a las imágenes */
+}
+
+
+
+
+/*historia foto*/
+/* Estilos para centrar el contenedor y la imagen */
+.image-grid.historia {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Coloca la imagen y el pie de imagen uno debajo del otro */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la página */
+}
+
+/* Estilos para la imagen */
+.image-grid.historia img {
+    max-width: 30%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para el pie de imagen */
+.caption {
+    font-style: italic; /* Aplica el estilo cursiva */
+    text-align: center; /* Centra el texto */
+    margin-top: 0px; /* Espacio entre la imagen y el pie de imagen */
+    font-size: 19px; /* Ajusta el tamaño de la fuente */
+}
+
+
+
+/*historia foto*/
+/* Estilos para centrar el contenedor y la imagen */
+.image-grid.historia2 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Coloca la imagen y el pie de imagen uno debajo del otro */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la página */
+}
+
+/* Estilos para la imagen */
+.image-grid.historia2 img {
+    max-width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+/*INDEX*/
+
+.image-grid.index {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta dinámicamente según el espacio disponible */
+    gap: 20px; /* Espaciado entre imágenes */
+}
+
+.image-grid.index img {
+    width: 100%; /* Se adapta al contenedor */
+    height: 200px; /* Altura fija para un tamaño uniforme */
+    object-fit: cover; /* Ajusta la imagen para que ocupe el espacio sin deformarse */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la animación */
+}
+
+.image-grid.index img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+
+

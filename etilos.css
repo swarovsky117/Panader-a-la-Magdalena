@@ -1,0 +1,38 @@
+body {
+    background-color: #EEC695; /* Fondo beige claro específico para Términos y Condiciones */
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif;
+    color: #5C4033; /* Texto marrón */
+font-size: 22px;
+}
+
+h1, h2 {
+    color: #8B4513; /* Títulos en marrón oscuro */
+}
+
+header {
+    background-color: #F5DEB3; /* Fondo más oscuro para el header */
+    padding: 10px 0;
+}
+
+main {
+    margin: 20px auto; /* Centra el contenido horizontalmente y ajusta el margen superior */
+    padding: 30px;
+    max-width: 700px; /* Ajusta el ancho máximo del contenedor */
+    background-color: #FFFFFF; /* Fondo blanco para el contenido */
+    border: 1px solid #E0C097;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: justify; /* Justifica el texto */
+    line-height: 1.8; /* Mejora la separación entre líneas */
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #8B4513;
+}
+

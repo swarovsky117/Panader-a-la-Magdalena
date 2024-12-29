@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería La Magdalena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <button class="menu-toggle" id="menu-toggle">
+                &#9776; <!-- Icono de tres rayitas -->
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                     <li><a href="historia.html">Historia</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Panadería La Magdalena</h1>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Bienvenidos a Panadería La Magdalena</h2>
+            <p>En nuestra panadería encontrarás una gran variedad de panes artesanales elaborados con los mejores ingredientes. ¡Ven y disfruta de nuestros deliciosos productos recién horneados!</p>
+        </section>
+
+   <section class="gallery">
+    <h3>Nuestros Panes</h3>
+    <div class="image-grid index">
+      <a href="catalogo.html">
+                <img src="pan1.jpg" alt="Pan 1">
+            </a>
+            <a href="catalogo.html">
+                <img src="pan2.jpg" alt="Pan 2">
+            </a>
+            <a href="catalogo.html">
+                <img src="pan3.jpg" alt="Pan 3">
+            </a>
+               <a href="catalogo.html">
+        <img src="pan_d2.jpg" alt="Pan 4">
+   </a>
+     <a href="catalogo.html">
+        <img src="pan_d3.jpg" alt="Pan 5">
+   </a>
+        <a href="catalogo.html">
+        <img src="pan_d10.jpg" alt="Pan 6">
+   </a>
+       <a href="catalogo.html">
+        <img src="pan_d1.jpg" alt="Pan 7">
+   </a>
+     <a href="catalogo.html">
+        <img src="pan_d4.jpg" alt="Pan 8">
+   </a>
+        
+    </div>
+</section>
+
+        <section class="catalogo-info">
+            <h3>Catálogo de Productos</h3>
+            <p>Visita nuestra sección de <a href="catalogo.html">Catálogo</a> para explorar todos nuestros tipos de pan.</p>
+        </section>
+    </main>
+
+   <footer>
+    <p>
+        <a href="terminos.html" style="text-decoration: none; color: inherit;">Términos y condiciones</a> | 
+        Copyright © 2024 Luis Daniel Garcés Ramírez
+    </p>
+    <p>
+        Correo electrónico: 
+        <a href="mailto:contacto@panaderialamagdalena.com" style="text-decoration: none; color: inherit;">contacto@panaderialamagdalena.com</a> 
+        | Teléfono: 55-1234-5678
+    </p>
+</footer>
+
+
+<script>
+    // Selecciona todas las imágenes de la galería con la clase 'image-hover'
+    const images = document.querySelectorAll('.image-hover');
+
+    images.forEach(image => {
+        image.addEventListener('mouseenter', () => {
+            // Cuando el cursor entra en una imagen, desplazarse a la sección de catálogo
+            document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

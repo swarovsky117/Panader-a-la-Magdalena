@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - Panadería La Magdalena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>                                                                                                                                                         
+    <header>
+        <div class="menu">
+            <button class="menu-toggle" id="menu-toggle">
+                &#9776; <!-- Icono de tres rayitas -->
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                   <li><a href="historia.html">Historia</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Panadería La Magdalena</h1>
+    </header>
+
+    <main>
+        <section class="ubicacion">
+            <h2>Encuéntranos aquí</h2>
+            <p>Estamos ubicados en la calle 10 #124, Col. Porvenir, Ciudad Nezahualtcoyotl, EDOMEX. 
+¡Visítanos para disfrutar de nuestros panes recién horneados!</p>
+            
+            <div class="mapa-imagenes">
+    <!-- Mapa de Google incrustado -->
+    <iframe 
+      
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.2897359962267!2d-99.05724812532664!3d19.413803641281998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fcf53a8ba21f%3A0xc956fde4cf5e53a6!2sC.%2010%20124%2C%20Col%20Metropolitana%2C%20Nezahualcoyotl%2C%2057430%20Cdad.%20Nezahualc%C3%B3yotl%2C%20M%C3%A9x.!5e1!3m2!1ses!2smx!4v1735412325638!5m2!1ses!2smx"
+        height="650" 
+        width 300% !important;
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+    <!-- Imágenes relacionadas a la panadería -->
+    <div class="imagenes-laterales">
+        <img src="panaderia1.jpg" alt="Interior de una panadería" width="500">
+        <img src="panaderia2.jpg" alt="Panes en vitrina" width="500">
+    </div>
+</div>
+
+        </section>
+    </main>
+
+   <footer>
+    <p>
+        <a href="terminos.html" style="text-decoration: none; color: inherit;">Términos y condiciones</a> | 
+        Copyright © 2024 Luis Daniel Garcés Ramírez
+    </p>
+    <p>
+        Correo electrónico: 
+        <a href="mailto:contacto@panaderialamagdalena.com" style="text-decoration: none; color: inherit;">contacto@panaderialamagdalena.com</a> 
+        | Teléfono: 55-1234-5678
+    </p>
+</footer>
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
